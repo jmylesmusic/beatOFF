@@ -13,8 +13,19 @@
     <!-- https://fonts.google.com/specimen/Monoton?preview.text=BeatOFF&classification=Display -->
     <!-- https://fonts.google.com/specimen/Rock+3D/tester?preview.text=BeatOFF&classification=Display -->
     <main>
+      <div class="game-title-screen">
+        <div id="title">beatOFF!</div>
+        <img src="./images/metal-drummer.jpg" id="intro-image" alt="drummer" />
+        <duv id="mode-button-container">
+          <div id="new-game">New Game</div>
+          <div id="free-jam">Free Jam</div>
+          <div id="instructions">instructions</div>
+        </duv>
+      </div>
+
       <div class="game-container">
-        <div id="game-title-screen">beatOFF!</div>
+        <div id="game-title">beatOFF!</div>
+        <img id="strobe-lights" src="./images/lights-loop.gif" alt="lights" />
         <img src="./images/drumkit-medium.png" id="drum-image" alt="drums" />
 
         <div class="rails-container">
@@ -47,20 +58,36 @@
           <div id="crash-cymbal-light"></div>
           <div id="ride-cymbal-light"></div>
         </div>
-      </div>
-
-      <div class="button-container">
-        <button id="hi-hat">Hi Hat (A)</button>
-        <button id="crash-cymbal">Crash Cymbal (Q)</button>
-        <button id="snare-drum">Snare Drum (S)</button>
-        <button id="hi-tom">Hi Tom (W)</button>
-        <button id="kick-drum">Kick Drum (X)</button>
-        <button id="mid-tom">Mid Tom (E)</button>
-        <button id="low-tom">Low Tom (D)</button>
-        <button id="floor-tom">Floor Tom (C)</button>
-        <button id="ride-cymbal">Ride Cymbal (R)</button>
+        <div class="drum-button-container">
+          <div id="hi-hat">Hi Hat</div>
+          <div id="crash-cymbal">Crash Cymbal</div>
+          <div id="snare-drum">Snare Drum</div>
+          <div id="hi-tom">Hi Tom</div>
+          <div id="kick-drum">Kick Drum</div>
+          <div id="mid-tom">Mid Tom</div>
+          <div id="low-tom">Low Tom</div>
+          <div id="floor-tom">Floor Tom</div>
+          <div id="ride-cymbal">Ride Cymbal</div>
+        </div>
+        <div class="drum-light-wrapper-container">
+          <div id="hi-hat-wrapper">A</div>
+          <div id="crash-cymbal-wrapper">Q</div>
+          <div id="snare-drum-wrapper">S</div>
+          <div id="hi-tom-wrapper">W</div>
+          <div id="kick-drum-wrapper">X</div>
+          <div id="mid-tom-wrapper">E</div>
+          <div id="low-tom-wrapper">D</div>
+          <div id="ride-cymbal-wrapper">R</div>
+        </div>
+        <div class="information-container">
+          <div id="level">Level 1</div>
+          <div id="score">Score: 0</div>
+          <div id="streak">Streak: 0</div>
+        </div>
       </div>
     </main>
+    <script src="./game.js"></script>
     <script src="./script.js"></script>
+    <script src="./notes.js"></script>
   </body>
 </html>

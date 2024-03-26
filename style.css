@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tauri&display=swap");
 
 :root {
   /* Theme Colors */
@@ -25,35 +26,119 @@ body {
   font-style: normal;
 }
 
-#game-title-screen {
+/* HOME SCREEN */
+.game-title-screen {
+  display: block;
+  position: absolute;
+  justify-content: center;
   color: white;
   font-size: 60px;
   text-align: center;
-}
-
-.game-container {
   width: 800px;
   height: 1000px;
-  padding: 20px 0px;
-  background-color: var(--bodycolor1);
+  background-color: #161616;
   border: 3px solid var(--bodycolor3);
+}
+
+#intro-image {
+  position: absolute;
+  display: block;
+  position: absolute;
+  height: auto;
+  width: 800px;
+}
+
+#title {
+  position: absolute;
+  display: block;
+  text-align: center;
+  left: 20px;
+  z-index: 1;
 }
 
 #drum-image {
   display: block;
   position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  top: 500px;
+  top: 505px;
 }
 
-.button-container {
+#mode-button-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 800px;
+  height: 400px;
+  bottom: 20px;
+  z-index: 1;
+}
+
+#mode-button-container > div {
+  font-size: 40px;
+  padding: 20px;
+  cursor: pointer;
+}
+
+#mode-button-container > div:hover {
+  color: var(--bodycolor3);
+}
+
+/* GAMEPLAY */
+.game-container {
+  display: none;
+  justify-content: center;
+  width: 800px;
+  height: 1000px;
+  background-color: var(--bodycolor4);
+  border: 3px solid var(--bodycolor3);
+  color: white;
+}
+
+#game-title {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+}
+
+#strobe-lights {
   display: block;
+  width: 800px;
+  height: auto;
+}
+
+.drum-button-container {
+  position: absolute;
+  display: none;
+  align-items: center;
+  font-family: "Tauri", sans-serif;
+  font-size: 14px;
+}
+
+.drum-button-container > div {
+  display: block;
+  border: 1px solid white;
+}
+
+.drum-button-container > div:hover {
+  cursor: pointer;
+}
+
+.rails-container {
+  position: absolute;
+  display: block;
+  top: -50px;
+}
+
+.drum-light-wrapper-container {
+  text-align: center;
+  font-family: Tauri;
+  color: white;
 }
 
 #hi-hat-rail {
   position: absolute;
-  height: 332px;
+  height: 330px;
   width: 5px;
   background-color: var(--instcolor1);
   left: 50px;
@@ -62,13 +147,38 @@ body {
 }
 #hi-hat-event {
   position: absolute;
+  display: none;
   border-radius: 5px;
   height: 20px;
   width: 50px;
-  background-color: var(--instcolor1);
+  background: linear-gradient(
+    45deg,
+    #ffb2b4 0%,
+    var(--instcolor1) 18%,
+    var(--instcolor1) 82%,
+    #ffb2b4 100%
+  );
   left: 27px;
   top: 120px;
   border: 1px solid white;
+}
+
+#hi-hat-wrapper {
+  position: absolute;
+  border-radius: 5px;
+  height: 22px;
+  width: 54px;
+  background: linear-gradient(
+    45deg,
+    #ffb2b4 0%,
+    var(--instcolor1) 18%,
+    var(--instcolor1) 82%,
+    #ffb2b4 100%
+  );
+  left: 35px;
+  top: 401px;
+  opacity: 0.75;
+  border: 2px solid white;
 }
 
 #crash-rail {
@@ -83,13 +193,38 @@ body {
 
 #crash-event {
   position: absolute;
+  display: none;
   border-radius: 5px;
-  height: 20px;
-  width: 50px;
-  background-color: var(--instcolor2);
+  height: 22px;
+  width: 54px;
+  background: linear-gradient(
+    45deg,
+    #ffc5a0 0%,
+    var(--instcolor2) 18%,
+    var(--instcolor2) 82%,
+    #ffc5a0 100%
+  );
   left: 127px;
   top: 120px;
   border: 1px solid white;
+}
+
+#crash-cymbal-wrapper {
+  position: absolute;
+  border-radius: 5px;
+  height: 22px;
+  width: 54px;
+  background: linear-gradient(
+    45deg,
+    #ffc5a0 0%,
+    var(--instcolor2) 18%,
+    var(--instcolor2) 82%,
+    #ffc5a0 100%
+  );
+  left: 135px;
+  top: 401px;
+  opacity: 0.75;
+  border: 2px solid white;
 }
 
 #snare-rail {
@@ -104,13 +239,38 @@ body {
 
 #snare-event {
   position: absolute;
+  display: none;
   border-radius: 5px;
   height: 20px;
   width: 50px;
-  background-color: var(--instcolor3);
+  background: linear-gradient(
+    45deg,
+    #ffe498 0%,
+    var(--instcolor3) 18%,
+    var(--instcolor3) 82%,
+    #ffe498 100%
+  );
   left: 227px;
   top: 120px;
   border: 1px solid white;
+}
+
+#snare-drum-wrapper {
+  position: absolute;
+  border-radius: 5px;
+  height: 22px;
+  width: 54px;
+  background: linear-gradient(
+    45deg,
+    #ffe498 0%,
+    var(--instcolor3) 18%,
+    var(--instcolor3) 82%,
+    #ffe498 100%
+  );
+  left: 235px;
+  top: 401px;
+  opacity: 0.75;
+  border: 2px solid white;
 }
 
 #hi-tom-rail {
@@ -125,13 +285,38 @@ body {
 
 #hi-tom-event {
   position: absolute;
+  display: none;
   border-radius: 5px;
   height: 20px;
   width: 50px;
-  background-color: var(--instcolor4);
+  background: linear-gradient(
+    45deg,
+    #eff37e 0%,
+    var(--instcolor4) 18%,
+    var(--instcolor4) 82%,
+    #eff37e 100%
+  );
   left: 327px;
   top: 120px;
   border: 1px solid white;
+}
+
+#hi-tom-wrapper {
+  position: absolute;
+  border-radius: 5px;
+  height: 22px;
+  width: 54px;
+  background: linear-gradient(
+    45deg,
+    #eff37e 0%,
+    var(--instcolor4) 18%,
+    var(--instcolor4) 82%,
+    #eff37e 100%
+  );
+  left: 335px;
+  top: 401px;
+  opacity: 0.75;
+  border: 2px solid white;
 }
 
 #kick-rail {
@@ -146,13 +331,38 @@ body {
 
 #kick-event {
   position: absolute;
+  display: none;
   border-radius: 5px;
   height: 20px;
   width: 50px;
-  background-color: var(--instcolor5);
+  background: linear-gradient(
+    45deg,
+    #cfddb9 0%,
+    var(--instcolor5) 18%,
+    var(--instcolor5) 82%,
+    #cfddb9 100%
+  );
   left: 427px;
   top: 120px;
   border: 1px solid white;
+}
+
+#kick-drum-wrapper {
+  position: absolute;
+  border-radius: 5px;
+  height: 22px;
+  width: 54px;
+  background: linear-gradient(
+    45deg,
+    #cfddb9 0%,
+    var(--instcolor5) 18%,
+    var(--instcolor5) 82%,
+    #cfddb9 100%
+  );
+  left: 435px;
+  top: 401px;
+  opacity: 0.75;
+  border: 2px solid white;
 }
 
 #mid-tom-rail {
@@ -167,13 +377,38 @@ body {
 
 #mid-tom-event {
   position: absolute;
+  display: none;
   border-radius: 5px;
   height: 20px;
   width: 50px;
-  background-color: var(--instcolor6);
+  background: linear-gradient(
+    45deg,
+    #9bc4ac 0%,
+    var(--instcolor6) 18%,
+    var(--instcolor6) 82%,
+    #9bc4ac 100%
+  );
   left: 527px;
   top: 120px;
   border: 1px solid white;
+}
+
+#mid-tom-wrapper {
+  position: absolute;
+  border-radius: 5px;
+  height: 22px;
+  width: 54px;
+  background: linear-gradient(
+    45deg,
+    #9bc4ac 0%,
+    var(--instcolor6) 18%,
+    var(--instcolor6) 82%,
+    #9bc4ac 100%
+  );
+  left: 535px;
+  top: 401px;
+  opacity: 0.75;
+  border: 2px solid white;
 }
 
 #low-tom-rail {
@@ -188,13 +423,38 @@ body {
 
 #low-tom-event {
   position: absolute;
+  display: none;
   border-radius: 5px;
   height: 20px;
   width: 50px;
-  background-color: var(--instcolor7);
+  background: linear-gradient(
+    45deg,
+    #9bc4ac 0%,
+    var(--instcolor7) 18%,
+    var(--instcolor7) 82%,
+    #9bc4ac 100%
+  );
   left: 627px;
   top: 120px;
   border: 1px solid white;
+}
+
+#low-tom-wrapper {
+  position: absolute;
+  border-radius: 5px;
+  height: 22px;
+  width: 54px;
+  background: linear-gradient(
+    45deg,
+    #9bc4ac 0%,
+    var(--instcolor7) 18%,
+    var(--instcolor7) 82%,
+    #9bc4ac 100%
+  );
+  left: 635px;
+  top: 401px;
+  opacity: 0.75;
+  border: 2px solid white;
 }
 
 #ride-rail {
@@ -209,13 +469,38 @@ body {
 
 #ride-event {
   position: absolute;
+  display: none;
   border-radius: 5px;
   height: 20px;
   width: 50px;
-  background-color: var(--instcolor8);
+  background: linear-gradient(
+    45deg,
+    #9bc4ac 0%,
+    var(--instcolor8) 18%,
+    var(--instcolor8) 82%,
+    #9bc4ac 100%
+  );
   left: 727px;
   top: 120px;
   border: 1px solid white;
+}
+
+#ride-cymbal-wrapper {
+  position: absolute;
+  border-radius: 5px;
+  height: 22px;
+  width: 54px;
+  background: linear-gradient(
+    45deg,
+    #9bc4ac 0%,
+    var(--instcolor8) 18%,
+    var(--instcolor8) 82%,
+    #9bc4ac 100%
+  );
+  left: 735px;
+  top: 401px;
+  opacity: 0.75;
+  border: 2px solid white;
 }
 
 #hi-hat-light {
@@ -324,4 +609,17 @@ body {
 
 #floor-tom {
   display: none;
+}
+
+.information-container {
+  display: block;
+  position: absolute;
+  font-family: Tauri;
+  top: 520px;
+  left: 690px;
+  font-size: 20px;
+}
+
+#level {
+  font-family: "Monoton", sans-serif;
 }

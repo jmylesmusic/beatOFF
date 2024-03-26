@@ -1,9 +1,3 @@
-class Game {
-  constructor() {
-    this.notes = notes;
-  }
-}
-
 // Hi-Hat
 const hiHat = document.getElementById("hi-hat");
 const hiHatSound = new Audio("./sounds/hi-hat.mp3");
@@ -51,7 +45,7 @@ const lowTom = document.getElementById("low-tom");
 const lowTomSound = new Audio("./sounds/low-tom.mp3");
 let lowTomKey = "KeyD";
 const lowTomLight = document.getElementById("low-tom-light");
-buttonClicks(lowTom, lowTomSound, lowTomKey);
+buttonClicks(lowTom, lowTomSound, lowTomLight);
 makeSoundAndLight(lowTomSound, lowTomKey, lowTomLight);
 // Floor Tom
 const floorTom = document.getElementById("floor-tom");
@@ -96,3 +90,17 @@ function buttonClicks(instrument, sound, light) {
     makeLight(light);
   });
 }
+// How about a game that runs?
+window.onload = function () {
+  const startButton = document.getElementById("new-game");
+  let game;
+
+  startButton.addEventListener("click", function () {
+    startGame();
+  });
+
+  function startGame() {
+    game = new Game();
+    game.start();
+  }
+};
