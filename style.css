@@ -19,6 +19,24 @@
   --instcolor9: #6a4c93;
 }
 
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 body {
   background: linear-gradient(90deg, var(--bodycolor1), var(--bodycolor4));
   font-family: "Monoton", sans-serif;
@@ -27,6 +45,10 @@ body {
 }
 
 /* HOME SCREEN */
+.warning-label {
+  display: none;
+}
+
 .game-title-screen {
   display: block;
   position: absolute;
@@ -38,6 +60,8 @@ body {
   height: 1000px;
   background-color: #161616;
   border: 3px solid var(--bodycolor3);
+  animation: fadein;
+  animation-duration: 1s;
 }
 
 #intro-image {
@@ -48,7 +72,7 @@ body {
   width: 800px;
 }
 
-#title {
+#home-screen-title {
   position: absolute;
   display: block;
   text-align: center;
@@ -86,25 +110,45 @@ body {
 /* GAMEPLAY */
 .game-container {
   display: none;
-  justify-content: center;
   width: 800px;
   height: 1000px;
   background-color: var(--bodycolor4);
   border: 3px solid var(--bodycolor3);
   color: white;
+  animation: fadein;
+  animation-duration: 1s;
 }
 
 #game-title {
   position: absolute;
+  display: block;
   top: 20px;
   left: 20px;
   color: white;
+  z-index: 1;
+}
+
+#game-title:hover {
+  color: var(--bodycolor2);
+  cursor: pointer;
 }
 
 #strobe-lights {
+  position: absolute;
   display: block;
   width: 800px;
   height: auto;
+  animation: fadein;
+  animation-duration: 2s;
+}
+
+#studio-image {
+  position: absolute;
+  display: none;
+  width: 800px;
+  height: auto;
+  animation: fadein;
+  animation-duration: 2s;
 }
 
 .drum-button-container {
@@ -114,6 +158,15 @@ body {
   font-family: "Tauri", sans-serif;
   font-size: 14px;
 }
+
+/*CHANGED
+.drum-button-container {
+  position: absolute;
+  display: none;
+  align-items: center;
+  font-family: "Tauri", sans-serif;
+  font-size: 14px;
+}*/
 
 .drum-button-container > div {
   display: block;
@@ -181,6 +234,18 @@ body {
   border: 2px solid white;
 }
 
+#hi-hat-wrapper-light {
+  position: absolute;
+  display: block;
+  border-radius: 5px;
+  height: 19px;
+  width: 53px;
+  left: 33px;
+  top: 401px;
+  opacity: 0;
+  border: 4px solid whitesmoke;
+}
+
 #crash-rail {
   position: absolute;
   height: 330px;
@@ -225,6 +290,18 @@ body {
   top: 401px;
   opacity: 0.75;
   border: 2px solid white;
+}
+
+#crash-cymbal-wrapper-light {
+  position: absolute;
+  display: block;
+  border-radius: 5px;
+  height: 19px;
+  width: 53px;
+  left: 133px;
+  top: 401px;
+  opacity: 0;
+  border: 4px solid whitesmoke;
 }
 
 #snare-rail {
@@ -273,6 +350,18 @@ body {
   border: 2px solid white;
 }
 
+#snare-drum-wrapper-light {
+  position: absolute;
+  display: block;
+  border-radius: 5px;
+  height: 19px;
+  width: 53px;
+  left: 233px;
+  top: 401px;
+  opacity: 0;
+  border: 4px solid whitesmoke;
+}
+
 #hi-tom-rail {
   position: absolute;
   height: 330px;
@@ -317,6 +406,18 @@ body {
   top: 401px;
   opacity: 0.75;
   border: 2px solid white;
+}
+
+#hi-tom-wrapper-light {
+  position: absolute;
+  display: block;
+  border-radius: 5px;
+  height: 19px;
+  width: 53px;
+  left: 333px; /* Increased by 100 */
+  top: 401px;
+  opacity: 0;
+  border: 4px solid whitesmoke;
 }
 
 #kick-rail {
@@ -365,6 +466,18 @@ body {
   border: 2px solid white;
 }
 
+#kick-drum-wrapper-light {
+  position: absolute;
+  display: block;
+  border-radius: 5px;
+  height: 19px;
+  width: 53px;
+  left: 433px; /* Increased by 100 */
+  top: 401px;
+  opacity: 0;
+  border: 4px solid whitesmoke;
+}
+
 #mid-tom-rail {
   position: absolute;
   height: 330px;
@@ -409,6 +522,18 @@ body {
   top: 401px;
   opacity: 0.75;
   border: 2px solid white;
+}
+
+#mid-tom-wrapper-light {
+  position: absolute;
+  display: block;
+  border-radius: 5px;
+  height: 19px;
+  width: 53px;
+  left: 533px; /* Increased by 100 */
+  top: 401px;
+  opacity: 0;
+  border: 4px solid whitesmoke;
 }
 
 #low-tom-rail {
@@ -457,6 +582,18 @@ body {
   border: 2px solid white;
 }
 
+#low-tom-wrapper-light {
+  position: absolute;
+  display: block;
+  border-radius: 5px;
+  height: 19px;
+  width: 53px;
+  left: 633px; /* Increased by 100 */
+  top: 401px;
+  opacity: 0;
+  border: 4px solid whitesmoke;
+}
+
 #ride-rail {
   position: absolute;
   height: 330px;
@@ -501,6 +638,18 @@ body {
   top: 401px;
   opacity: 0.75;
   border: 2px solid white;
+}
+
+#ride-cymbal-wrapper-light {
+  position: absolute;
+  display: block;
+  border-radius: 5px;
+  height: 19px;
+  width: 53px;
+  left: 733px; /* Increased by 100 */
+  top: 401px;
+  opacity: 0;
+  border: 4px solid whitesmoke;
 }
 
 #hi-hat-light {
@@ -616,10 +765,183 @@ body {
   position: absolute;
   font-family: Tauri;
   top: 520px;
-  left: 690px;
+  right: 60px;
   font-size: 20px;
+  width: 200px;
 }
 
 #level {
   font-family: "Monoton", sans-serif;
+}
+
+#next-level {
+  position: absolute;
+  display: none;
+  text-align: center;
+  background-color: var(--bodycolor3);
+  border-radius: 2px;
+  width: 150px;
+  top: 180px;
+  right: 70px;
+  padding: 20px 0;
+  animation: fadein;
+  animation-duration: 1s;
+}
+
+#next-level:hover {
+  background-color: var(--bodycolor2);
+  cursor: pointer;
+}
+
+#retry-level {
+  position: absolute;
+  display: none;
+  text-align: center;
+  background-color: var(--bodycolor3);
+  border-radius: 2px;
+  width: 150px;
+  top: 280px;
+  right: 70px;
+  padding: 20px 0;
+  animation: fadein;
+  animation-duration: 1s;
+}
+
+#retry-level:hover {
+  background-color: var(--bodycolor2);
+  cursor: pointer;
+}
+
+.count-in {
+  font-size: 240px;
+  color: white;
+}
+
+#one {
+  position: absolute;
+  display: none;
+  align-content: center;
+  text-align: center;
+  background-color: #161616;
+  border-radius: 50%;
+  left: 10px;
+  top: 10px;
+  width: 200px;
+  height: 455px;
+}
+
+#two {
+  position: absolute;
+  display: none;
+  align-content: center;
+  text-align: center;
+  background-color: #161616;
+  border-radius: 50%;
+  left: 210px;
+  top: 10px;
+  width: 200px;
+  height: 455px;
+}
+
+#three {
+  position: absolute;
+  display: none;
+  align-content: center;
+  text-align: center;
+  background-color: #161616;
+  border-radius: 50%;
+  left: 410px;
+  top: 10px;
+  width: 200px;
+  height: 455px;
+}
+
+#four {
+  position: absolute;
+  display: none;
+  align-content: center;
+  text-align: center;
+  background-color: #161616;
+  border-radius: 50%;
+  left: 610px;
+  top: 10px;
+  width: 200px;
+  height: 455px;
+}
+
+@media (max-width: 800px) {
+  .game-title-screen {
+    display: none;
+  }
+
+  .game-container {
+    display: none;
+  }
+
+  .information-container {
+    display: none;
+  }
+
+  #strobe-lights {
+    display: none;
+  }
+
+  #game-title {
+    display: none;
+  }
+
+  .rails-container {
+    display: none;
+  }
+
+  .drum-button-container {
+    display: none;
+  }
+
+  .drum-light-wrapper-container {
+    display: none;
+  }
+
+  #drum-image {
+    display: none;
+  }
+
+  /* CHANGED 
+#drum-image {
+  display: block;
+  position: absolute;
+  top: 505px;
+  left: 150px;  CHANGED 
+}
+*/
+
+  .warning-label {
+    display: block;
+    font-family: Tauri;
+    font-size: 2em;
+    text-align: center;
+    color: whitesmoke;
+  }
+}
+
+@media (max-height: 1000px) {
+  .game-title-screen {
+    display: none;
+  }
+
+  .game-container {
+    display: none;
+  }
+
+  .drum-button-container {
+    display: none;
+  }
+
+  .warning-label {
+    display: block;
+    font-family: Tauri;
+    font-size: 2em;
+    text-align: center;
+    color: whitesmoke;
+  }
 }

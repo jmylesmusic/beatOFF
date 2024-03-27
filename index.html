@@ -13,8 +13,15 @@
     <!-- https://fonts.google.com/specimen/Monoton?preview.text=BeatOFF&classification=Display -->
     <!-- https://fonts.google.com/specimen/Rock+3D/tester?preview.text=BeatOFF&classification=Display -->
     <main>
+      <div class="warning-label">
+        <p>WARNING!</p>
+        <p>
+          This game requires a screen with at least 800px x 1000px to operate!
+        </p>
+        <p>Please reopen on a full browser window to continue.</p>
+      </div>
       <div class="game-title-screen">
-        <div id="title">beatOFF!</div>
+        <div id="home-screen-title">beatOFF!</div>
         <img src="./images/metal-drummer.jpg" id="intro-image" alt="drummer" />
         <duv id="mode-button-container">
           <div id="new-game">New Game</div>
@@ -26,7 +33,8 @@
       <div class="game-container">
         <div id="game-title">beatOFF!</div>
         <img id="strobe-lights" src="./images/lights-loop.gif" alt="lights" />
-        <img src="./images/drumkit-medium.png" id="drum-image" alt="drums" />
+        <img id="drum-image" src="./images/drumkit-medium.png" alt="drums" />
+        <img id="studio-image" src="./images/studio.webp" alt="studio" />
 
         <div class="rails-container">
           <div id="hi-hat-rail"></div>
@@ -49,13 +57,13 @@
 
         <div class="drum-lights-container">
           <div id="hi-hat-light"></div>
+          <div id="crash-cymbal-light"></div>
           <div id="snare-drum-light"></div>
-          <div id="kick-drum-light"></div>
           <div id="hi-tom-light"></div>
+          <div id="kick-drum-light"></div>
           <div id="mid-tom-light"></div>
           <div id="low-tom-light"></div>
           <div id="floor-tom-light"></div>
-          <div id="crash-cymbal-light"></div>
           <div id="ride-cymbal-light"></div>
         </div>
         <div class="drum-button-container">
@@ -79,15 +87,33 @@
           <div id="low-tom-wrapper">D</div>
           <div id="ride-cymbal-wrapper">R</div>
         </div>
+        <div class="drum-wrapper-press-container">
+          <div id="hi-hat-wrapper-light"></div>
+          <div id="crash-cymbal-wrapper-light"></div>
+          <div id="snare-drum-wrapper-light"></div>
+          <div id="hi-tom-wrapper-light"></div>
+          <div id="kick-drum-wrapper-light"></div>
+          <div id="mid-tom-wrapper-light"></div>
+          <div id="low-tom-wrapper-light"></div>
+          <div id="ride-cymbal-wrapper-light"></div>
+        </div>
         <div class="information-container">
           <div id="level">Level 1</div>
           <div id="score">Score: 0</div>
           <div id="streak">Streak: 0</div>
+          <div id="next-level">Next Level</div>
+          <div id="retry-level">Retry Level</div>
         </div>
+      </div>
+      <div class="count-in">
+        <div id="one">1</div>
+        <div id="two">2</div>
+        <div id="three">3</div>
+        <div id="four">4</div>
       </div>
     </main>
     <script src="./game.js"></script>
     <script src="./script.js"></script>
-    <script src="./notes.js"></script>
+    <script src="./note.js"></script>
   </body>
 </html>
