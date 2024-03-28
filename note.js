@@ -4,30 +4,31 @@ class Note {
     this.name = name;
     this.top = 62;
     this.left;
+    this.collide = document.querySelector(".collide-box");
     switch (name) {
       case "hi-hat":
-        this.left = 37;
+        this.left = 27;
         break;
       case "crash":
-        this.left = 137;
+        this.left = 127;
         break;
       case "snare":
-        this.left = 237;
+        this.left = 227;
         break;
       case "hi-tom":
-        this.left = 337;
+        this.left = 327;
         break;
       case "kick":
-        this.left = 437;
+        this.left = 427;
         break;
       case "mid-tom":
-        this.left = 537;
+        this.left = 527;
         break;
       case "low-tom":
-        this.left = 637;
+        this.left = 627;
         break;
       case "ride":
-        this.left = 737;
+        this.left = 727;
     }
     // this.element = document.getElementById("high-hat-light");
     this.element = document.createElement("img");
@@ -46,12 +47,29 @@ class Note {
 
   move() {
     // Move the obstacle down by 3px
-    this.top += 3;
+    this.top += 4;
     // Update the obstacle's position on the screen
     this.updatePosition();
 
-    if (this.top >= 402) {
-      this.element.style.display = "none";
+    if (this.top >= 405) {
+      this.element.remove();
     }
+  }
+
+  getIntersectionArea(hitbox) {
+    const targetRect = this.element.getBoundingClientRect();
+    const topRect = this.collide.getBoundingClientRect();
+
+    const top = Math.max(topRect.top, targetRect.top);
+    const bottom = Math.min(bottomRect.bottom, targetRect.bottom);
+    const left = Math.max(topRect.left, targetRect.left);
+    const right = Math.min(bottomRect.right, targetRect.right);
+
+    const width = right - left;
+    const height = bottom - top;
+
+    const intersectionArea = width * height;
+
+    return intersectionArea;
   }
 }
