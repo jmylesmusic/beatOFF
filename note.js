@@ -4,21 +4,21 @@ class Note {
     this.name = name;
     this.top = 62;
     this.left;
-    this.collide = document.querySelector(".collide-box");
+
     switch (name) {
       case "hi-hat":
         this.left = 27;
         break;
-      case "crash":
+      case "crash-cymbal":
         this.left = 127;
         break;
-      case "snare":
+      case "snare-drum":
         this.left = 227;
         break;
       case "hi-tom":
         this.left = 327;
         break;
-      case "kick":
+      case "kick-drum":
         this.left = 427;
         break;
       case "mid-tom":
@@ -27,7 +27,7 @@ class Note {
       case "low-tom":
         this.left = 627;
         break;
-      case "ride":
+      case "ride-cymbal":
         this.left = 727;
     }
     // this.element = document.getElementById("high-hat-light");
@@ -56,20 +56,17 @@ class Note {
     }
   }
 
-  getIntersectionArea(hitbox) {
-    const targetRect = this.element.getBoundingClientRect();
-    const topRect = this.collide.getBoundingClientRect();
-
-    const top = Math.max(topRect.top, targetRect.top);
-    const bottom = Math.min(bottomRect.bottom, targetRect.bottom);
-    const left = Math.max(topRect.left, targetRect.left);
-    const right = Math.min(bottomRect.right, targetRect.right);
-
-    const width = right - left;
-    const height = bottom - top;
-
-    const intersectionArea = width * height;
-
-    return intersectionArea;
+  didCollide(hitbox) {
+    const noteBlock = this.element.getBoundingClientRect();
+    const hitboxBlock = hitbox.getBoundingClientRect();
+    console.log(hitboxBlock);
+    if (
+      noteBlock.left < hitboxBlock.right &&
+      noteBlock.right > hitboxBlock.left &&
+      noteBlock.top < hitboxBlock.bottom &&
+      noteBlock.bottom > hitboxBlock.top
+    ) {
+      return true;
+    } else return false;
   }
 }
