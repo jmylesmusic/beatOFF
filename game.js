@@ -196,9 +196,6 @@ class Game {
     this.collideBox = document.querySelector(".collide-box");
     this.scoreboard.innerText = `Score: 0`;
     this.frameNumber = 0;
-    if (this.level > 4) {
-      this.gameComplete();
-    }
     this.gameIntervalId = setInterval(() => {
       this.frameNumber += 1;
       this.levelScreen();
@@ -324,8 +321,8 @@ class Game {
         this.numberOfNotes = this.notesLevelThree.length;
         break;
       case 4:
-        notesArray = this.notesLevelThree;
-        this.numberOfNotes = this.notesLevelThree.length;
+        notesArray = this.notesLevelFour;
+        this.numberOfNotes = this.notesLevelFour.length;
     }
 
     const notesToPlay = notesArray.filter(
@@ -354,22 +351,20 @@ class Game {
   }
 
   countIn(frame) {
-    if (frame === 51) {
+    if (this.level > 4) {
+      this.gameComplete();
+    } else if (frame === 51) {
       this.countOne.style.display = "block";
-    }
-    if (frame === 80) {
+    } else if (frame === 80) {
       this.countOne.style.display = "none";
       this.countTwo.style.display = "block";
-    }
-    if (frame === 110) {
+    } else if (frame === 110) {
       this.countTwo.style.display = "none";
       this.countThree.style.display = "block";
-    }
-    if (frame === 140) {
+    } else if (frame === 140) {
       this.countThree.style.display = "none";
       this.countFour.style.display = "block";
-    }
-    if (frame === 170) {
+    } else if (frame === 170) {
       this.countFour.style.display = "none";
     }
   }
@@ -383,6 +378,7 @@ class Game {
     this.levelButton.style.display = "none";
     this.retryButton.style.display = "none";
   }
+
   gameComplete() {
     this.perfect.style.display = "none";
     this.good.style.display = "none";
