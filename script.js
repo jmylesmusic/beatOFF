@@ -257,7 +257,7 @@ window.onload = function () {
   instructionsButton.addEventListener("click", function () {
     console.log("instructions");
     instructionsMenu.style.display = "block";
-    gameTitleScreen.style.opacity = "0.25";
+    gameTitleScreen.style.opacity = "0.5";
   });
 
   const exitX = document.getElementById("x");
@@ -265,5 +265,11 @@ window.onload = function () {
     console.log("home");
     instructionsMenu.style.display = "none";
     gameTitleScreen.style.opacity = "1";
+  });
+
+  const returnHome = document.getElementById("return-home");
+  returnHome.addEventListener("click", function () {
+    console.log("home");
+    game.homeScreen();
   });
 };

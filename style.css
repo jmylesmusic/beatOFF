@@ -50,8 +50,8 @@ body {
 }
 
 .game-title-screen {
-  display: block;
   position: absolute;
+  display: block;
   justify-content: center;
   color: white;
   font-size: 60px;
@@ -189,15 +189,6 @@ body {
   animation-duration: 2s;
 }
 
-/*CHANGED
-.drum-button-container {
-  position: absolute;
-  display: none;
-  align-items: center;
-  font-family: "Tauri", sans-serif;
-  font-size: 14px;
-}*/
-
 #collide-box {
   position: absolute;
   display: block;
@@ -208,15 +199,6 @@ body {
   background-color: white;
   opacity: 0;
 }
-/* .collide-bottom {
-  position: absolute;
-  display: block;
-  top: 422px;
-  left: 0px;
-  width: 800px;
-  height: 1px;
-  background-color: white;
-} */
 
 .drum-button-container {
   position: absolute;
@@ -1095,7 +1077,36 @@ body {
   transition: opacity 0.1s ease-out;
 }
 
-@media (max-width: 800px) {
+/* Game Over Menu */
+#game-over-box {
+  position: absolute;
+  display: block;
+  opacity: 1;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  font-family: Tauri;
+  width: 600px;
+  height: 600px;
+  background-color: var(--bodycolor2);
+  top: 200px;
+  left: 100px;
+  border-radius: 12px;
+  animation: fadein;
+  animation-duration: 1s;
+}
+
+#game-over-box p {
+  padding: 20px;
+}
+
+#return-home:hover {
+  color: var(--bodycolor4);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 800px), (max-height: 1000px) {
   .game-title-screen {
     display: none;
   }
@@ -1105,6 +1116,10 @@ body {
   }
 
   .information-container {
+    display: none;
+  }
+
+  .free-jam-container {
     display: none;
   }
 
@@ -1140,28 +1155,6 @@ body {
   left: 150px;  CHANGED 
 }
 */
-
-  .warning-label {
-    display: block;
-    font-family: Tauri;
-    font-size: 2em;
-    text-align: center;
-    color: whitesmoke;
-  }
-}
-
-@media (max-height: 1000px) {
-  .game-title-screen {
-    display: none;
-  }
-
-  .game-container {
-    display: none;
-  }
-
-  .drum-button-container {
-    display: none;
-  }
 
   .warning-label {
     display: block;

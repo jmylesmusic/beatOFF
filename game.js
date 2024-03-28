@@ -1,6 +1,5 @@
 const levelOne = [
   { type: "kick-drum", timing: 120 },
-  { type: "snare-drum", timing: 120 },
   { type: "snare-drum", timing: 150 },
   { type: "kick-drum", timing: 180 },
   { type: "snare-drum", timing: 210 },
@@ -21,55 +20,115 @@ const levelOne = [
 ];
 
 const levelTwo = [
-  { type: "hi-hat", timing: 120 },
-  { type: "hi-hat", timing: 135 },
+  { type: "kick-drum", timing: 120 },
   { type: "hi-hat", timing: 150 },
-  { type: "hi-hat", timing: 165 },
-  { type: "hi-hat", timing: 180 },
-  { type: "hi-hat", timing: 195 },
+  { type: "snare-drum", timing: 180 },
   { type: "hi-hat", timing: 210 },
-  { type: "hi-hat", timing: 225 },
-  { type: "hi-hat", timing: 240 },
-  { type: "hi-hat", timing: 255 },
+  { type: "kick-drum", timing: 240 },
   { type: "hi-hat", timing: 270 },
-  { type: "hi-hat", timing: 285 },
-  { type: "hi-hat", timing: 300 },
-  { type: "hi-hat", timing: 315 },
+  { type: "snare-drum", timing: 300 },
   { type: "hi-hat", timing: 330 },
-  { type: "hi-hat", timing: 345 },
+  { type: "kick-drum", timing: 345 },
+  { type: "kick-drum", timing: 360 },
+  { type: "hi-hat", timing: 390 },
+  { type: "snare-drum", timing: 420 },
+  { type: "hi-hat", timing: 450 },
+  { type: "kick-drum", timing: 480 },
+  { type: "hi-hat", timing: 510 },
+  { type: "snare-drum", timing: 540 },
+  { type: "hi-hat", timing: 570 },
 ];
 
 const levelThree = [
   { type: "hi-hat", timing: 120 },
   { type: "hi-hat", timing: 135 },
+  { type: "snare-drum", timing: 150 },
   { type: "hi-hat", timing: 150 },
   { type: "hi-hat", timing: 165 },
   { type: "hi-hat", timing: 180 },
   { type: "hi-hat", timing: 195 },
+  { type: "snare-drum", timing: 210 },
   { type: "hi-hat", timing: 210 },
   { type: "hi-hat", timing: 225 },
   { type: "hi-hat", timing: 240 },
   { type: "hi-hat", timing: 255 },
+  { type: "snare-drum", timing: 270 },
   { type: "hi-hat", timing: 270 },
   { type: "hi-hat", timing: 285 },
   { type: "hi-hat", timing: 300 },
   { type: "hi-hat", timing: 315 },
+  { type: "snare-drum", timing: 330 },
   { type: "hi-hat", timing: 330 },
   { type: "hi-hat", timing: 345 },
   { type: "hi-hat", timing: 360 },
   { type: "hi-hat", timing: 375 },
+  { type: "snare-drum", timing: 390 },
   { type: "hi-hat", timing: 390 },
   { type: "hi-hat", timing: 405 },
   { type: "hi-hat", timing: 420 },
   { type: "hi-hat", timing: 435 },
+  { type: "snare-drum", timing: 450 },
   { type: "hi-hat", timing: 450 },
   { type: "hi-hat", timing: 465 },
   { type: "hi-hat", timing: 480 },
   { type: "hi-hat", timing: 495 },
+  { type: "snare-drum", timing: 510 },
   { type: "hi-hat", timing: 510 },
   { type: "hi-hat", timing: 525 },
   { type: "hi-hat", timing: 540 },
   { type: "hi-hat", timing: 555 },
+  { type: "snare-drum", timing: 570 },
+  { type: "hi-hat", timing: 570 },
+  { type: "hi-hat", timing: 585 },
+];
+
+const levelFour = [
+  { type: "kick-drum", timing: 120 },
+  { type: "hi-hat", timing: 120 },
+  { type: "hi-hat", timing: 135 },
+  { type: "snare-drum", timing: 150 },
+  { type: "hi-hat", timing: 150 },
+  { type: "hi-hat", timing: 165 },
+  { type: "hi-hat", timing: 180 },
+  { type: "hi-hat", timing: 195 },
+  { type: "kick-drum", timing: 195 },
+  { type: "snare-drum", timing: 210 },
+  { type: "hi-hat", timing: 210 },
+  { type: "hi-hat", timing: 225 },
+  { type: "kick-drum", timing: 240 },
+  { type: "hi-hat", timing: 240 },
+  { type: "hi-hat", timing: 255 },
+  { type: "snare-drum", timing: 270 },
+  { type: "hi-hat", timing: 270 },
+  { type: "hi-hat", timing: 285 },
+  { type: "hi-hat", timing: 300 },
+  { type: "hi-hat", timing: 315 },
+  { type: "kick-drum", timing: 315 },
+  { type: "snare-drum", timing: 330 },
+  { type: "hi-hat", timing: 330 },
+  { type: "hi-hat", timing: 345 },
+  { type: "kick-drum", timing: 360 },
+  { type: "hi-hat", timing: 360 },
+  { type: "hi-hat", timing: 375 },
+  { type: "snare-drum", timing: 390 },
+  { type: "hi-hat", timing: 390 },
+  { type: "hi-hat", timing: 405 },
+  { type: "hi-hat", timing: 420 },
+  { type: "hi-hat", timing: 435 },
+  { type: "kick-drum", timing: 435 },
+  { type: "snare-drum", timing: 450 },
+  { type: "hi-hat", timing: 450 },
+  { type: "hi-hat", timing: 465 },
+  { type: "kick-drum", timing: 480 },
+  { type: "hi-hat", timing: 480 },
+  { type: "hi-hat", timing: 495 },
+  { type: "snare-drum", timing: 510 },
+  { type: "hi-hat", timing: 510 },
+  { type: "hi-hat", timing: 525 },
+  { type: "hi-hat", timing: 540 },
+  { type: "hi-hat", timing: 555 },
+  { type: "kick-drum", timing: 555 },
+  { type: "snare-drum", timing: 570 },
   { type: "hi-hat", timing: 570 },
   { type: "hi-hat", timing: 585 },
 ];
@@ -77,7 +136,6 @@ const levelThree = [
 class Game {
   constructor() {
     this.startScreen = document.querySelector(".game-title-screen");
-    this.startScreen.style.display = "block";
     this.gameScreen = document.querySelector(".game-container");
     this.gameScreen.style.display = "none";
     this.freeJamScreen = document.querySelector(".free-jam-container");
@@ -100,6 +158,9 @@ class Game {
     this.notesLevelOne = levelOne;
     this.notesLevelTwo = levelTwo;
     this.notesLevelThree = levelThree;
+    this.notesLevelFour = levelFour;
+    this.gameOverMenu = document.getElementById("game-over-box");
+    this.gameOverMenu.style.display = "none";
     this.hitbox = document.getElementById("collide-box");
     this.gameIntervalId;
     this.gameLoopFrequency = Math.round(1000 / 60);
@@ -135,6 +196,9 @@ class Game {
     this.collideBox = document.querySelector(".collide-box");
     this.scoreboard.innerText = `Score: 0`;
     this.frameNumber = 0;
+    if (this.level > 4) {
+      this.gameComplete();
+    }
     this.gameIntervalId = setInterval(() => {
       this.frameNumber += 1;
       this.levelScreen();
@@ -149,14 +213,6 @@ class Game {
       clearInterval(this.gameIntervalId);
     }
     window.location.reload();
-    /*     this.startScreen.style.display = "block";
-    this.gameScreen.style.display = "none";
-    this.freeJamScreen.style.display = "none";
-    this.instructions.style.display = "none";
-    this.levelButton.style.display = "none";
-    this.retryButton.style.display = "none";
-    this.frameNumber = 0;
-    this.level = 1; */
   }
 
   instructionsMenu() {
@@ -267,6 +323,9 @@ class Game {
         notesArray = this.notesLevelThree;
         this.numberOfNotes = this.notesLevelThree.length;
         break;
+      case 4:
+        notesArray = this.notesLevelThree;
+        this.numberOfNotes = this.notesLevelThree.length;
     }
 
     const notesToPlay = notesArray.filter(
@@ -323,8 +382,11 @@ class Game {
     this.start();
     this.levelButton.style.display = "none";
     this.retryButton.style.display = "none";
-    if (this.level > 3) {
-      gameComplete();
-    }
+  }
+  gameComplete() {
+    this.perfect.style.display = "none";
+    this.good.style.display = "none";
+    this.bad.style.display = "none";
+    this.gameOverMenu.style.display = "block";
   }
 }
