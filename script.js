@@ -189,7 +189,7 @@ window.onload = function () {
       }
     });
   }
-
+  const themeSong = document.getElementById("theme-music");
   // Key Clicks and Light
   function buttonClicks(instrument, sound, light) {
     instrument.addEventListener("click", () => {
@@ -202,6 +202,8 @@ window.onload = function () {
   let game = new Game();
 
   startButton.addEventListener("click", function () {
+    themeSong.pause();
+    themeSong.currentTime = 0;
     startGame();
   });
 
@@ -224,6 +226,8 @@ window.onload = function () {
 
   const getFreeJam = document.getElementById("free-jam-button");
   getFreeJam.addEventListener("click", function () {
+    themeSong.pause();
+    themeSong.currentTime = 0;
     game = new Game();
     game.freeJam();
   });
