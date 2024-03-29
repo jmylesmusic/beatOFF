@@ -40,49 +40,6 @@ const levelTwo = [
 ];
 
 const levelThree = [
-  { type: "hi-hat", timing: 120 },
-  { type: "hi-hat", timing: 135 },
-  { type: "snare-drum", timing: 150 },
-  { type: "hi-hat", timing: 150 },
-  { type: "hi-hat", timing: 165 },
-  { type: "hi-hat", timing: 180 },
-  { type: "hi-hat", timing: 195 },
-  { type: "snare-drum", timing: 210 },
-  { type: "hi-hat", timing: 210 },
-  { type: "hi-hat", timing: 225 },
-  { type: "hi-hat", timing: 240 },
-  { type: "hi-hat", timing: 255 },
-  { type: "snare-drum", timing: 270 },
-  { type: "hi-hat", timing: 270 },
-  { type: "hi-hat", timing: 285 },
-  { type: "hi-hat", timing: 300 },
-  { type: "hi-hat", timing: 315 },
-  { type: "snare-drum", timing: 330 },
-  { type: "hi-hat", timing: 330 },
-  { type: "hi-hat", timing: 345 },
-  { type: "hi-hat", timing: 360 },
-  { type: "hi-hat", timing: 375 },
-  { type: "snare-drum", timing: 390 },
-  { type: "hi-hat", timing: 390 },
-  { type: "hi-hat", timing: 405 },
-  { type: "hi-hat", timing: 420 },
-  { type: "hi-hat", timing: 435 },
-  { type: "snare-drum", timing: 450 },
-  { type: "hi-hat", timing: 450 },
-  { type: "hi-hat", timing: 465 },
-  { type: "hi-hat", timing: 480 },
-  { type: "hi-hat", timing: 495 },
-  { type: "snare-drum", timing: 510 },
-  { type: "hi-hat", timing: 510 },
-  { type: "hi-hat", timing: 525 },
-  { type: "hi-hat", timing: 540 },
-  { type: "hi-hat", timing: 555 },
-  { type: "snare-drum", timing: 570 },
-  { type: "hi-hat", timing: 570 },
-  { type: "hi-hat", timing: 585 },
-];
-
-const levelFour = [
   { type: "kick-drum", timing: 120 },
   { type: "hi-hat", timing: 120 },
   { type: "hi-hat", timing: 135 },
@@ -95,8 +52,8 @@ const levelFour = [
   { type: "snare-drum", timing: 210 },
   { type: "hi-hat", timing: 210 },
   { type: "hi-hat", timing: 225 },
-  { type: "kick-drum", timing: 240 },
   { type: "hi-hat", timing: 240 },
+  { type: "kick-drum", timing: 240 },
   { type: "hi-hat", timing: 255 },
   { type: "snare-drum", timing: 270 },
   { type: "hi-hat", timing: 270 },
@@ -107,8 +64,8 @@ const levelFour = [
   { type: "snare-drum", timing: 330 },
   { type: "hi-hat", timing: 330 },
   { type: "hi-hat", timing: 345 },
-  { type: "kick-drum", timing: 360 },
   { type: "hi-hat", timing: 360 },
+  { type: "kick-drum", timing: 360 },
   { type: "hi-hat", timing: 375 },
   { type: "snare-drum", timing: 390 },
   { type: "hi-hat", timing: 390 },
@@ -119,8 +76,8 @@ const levelFour = [
   { type: "snare-drum", timing: 450 },
   { type: "hi-hat", timing: 450 },
   { type: "hi-hat", timing: 465 },
-  { type: "kick-drum", timing: 480 },
   { type: "hi-hat", timing: 480 },
+  { type: "kick-drum", timing: 480 },
   { type: "hi-hat", timing: 495 },
   { type: "snare-drum", timing: 510 },
   { type: "hi-hat", timing: 510 },
@@ -131,6 +88,91 @@ const levelFour = [
   { type: "snare-drum", timing: 570 },
   { type: "hi-hat", timing: 570 },
   { type: "hi-hat", timing: 585 },
+];
+
+const levelFour = [
+  { type: "kick-drum", timing: 120 },
+  { type: "ride-cymbal", timing: 120 },
+  { type: "ride-cymbal", timing: 135 },
+  { type: "snare-drum", timing: 150 },
+  { type: "ride-cymbal", timing: 165 },
+  { type: "ride-cymbal", timing: 180 },
+  { type: "kick-drum", timing: 195 },
+  { type: "ride-cymbal", timing: 195 },
+  { type: "snare-drum", timing: 210 },
+  { type: "ride-cymbal", timing: 225 },
+  { type: "kick-drum", timing: 240 },
+  { type: "ride-cymbal", timing: 240 },
+  { type: "ride-cymbal", timing: 255 },
+  { type: "snare-drum", timing: 270 },
+  { type: "kick-drum", timing: 285 },
+  { type: "ride-cymbal", timing: 285 },
+  { type: "ride-cymbal", timing: 300 },
+  { type: "kick-drum", timing: 315 },
+  { type: "ride-cymbal", timing: 315 },
+  { type: "snare-drum", timing: 330 },
+  { type: "ride-cymbal", timing: 345 },
+  { type: "kick-drum", timing: 360 },
+  { type: "ride-cymbal", timing: 360 },
+  { type: "ride-cymbal", timing: 375 },
+  { type: "snare-drum", timing: 390 },
+  { type: "ride-cymbal", timing: 405 },
+  { type: "ride-cymbal", timing: 420 },
+  { type: "ride-cymbal", timing: 435 },
+  { type: "kick-drum", timing: 435 },
+  { type: "snare-drum", timing: 450 },
+  { type: "ride-cymbal", timing: 465 },
+  { type: "ride-cymbal", timing: 480 },
+  { type: "kick-drum", timing: 480 },
+  { type: "ride-cymbal", timing: 495 },
+  { type: "snare-drum", timing: 510 },
+  { type: "kick-drum", timing: 525 },
+  { type: "ride-cymbal", timing: 525 },
+  { type: "ride-cymbal", timing: 540 },
+  { type: "ride-cymbal", timing: 555 },
+  { type: "kick-drum", timing: 555 },
+  { type: "snare-drum", timing: 570 },
+  { type: "ride-cymbal", timing: 585 },
+];
+
+const levelFive = [
+  { type: "kick-drum", timing: 120 },
+  { type: "hi-hat", timing: 120 },
+  { type: "hi-hat", timing: 135 },
+  { type: "snare-drum", timing: 150 },
+  { type: "hi-hat", timing: 165 },
+  { type: "hi-hat", timing: 180 },
+  { type: "kick-drum", timing: 195 },
+  { type: "hi-hat", timing: 195 },
+  { type: "snare-drum", timing: 210 },
+  { type: "hi-hat", timing: 225 },
+  { type: "kick-drum", timing: 240 },
+  { type: "hi-hat", timing: 240 },
+  { type: "hi-hat", timing: 255 },
+  { type: "snare-drum", timing: 270 },
+  { type: "hi-hat", timing: 285 },
+  { type: "kick-drum", timing: 300 },
+  { type: "hi-tom", timing: 315 },
+  { type: "mid-tom", timing: 330 },
+  { type: "low-tom", timing: 345 },
+  { type: "kick-drum", timing: 360 },
+  { type: "crash-cymbal", timing: 360 },
+  { type: "hi-hat", timing: 375 },
+  { type: "snare-drum", timing: 390 },
+  { type: "hi-hat", timing: 405 },
+  { type: "hi-hat", timing: 420 },
+  { type: "kick-drum", timing: 435 },
+  { type: "hi-hat", timing: 435 },
+  { type: "snare-drum", timing: 450 },
+  { type: "hi-hat", timing: 465 },
+  { type: "kick-drum", timing: 480 },
+  { type: "hi-hat", timing: 495 },
+  { type: "snare-drum", timing: 510 },
+  { type: "hi-hat", timing: 525 },
+  { type: "kick-drum", timing: 540 },
+  { type: "hi-tom", timing: 555 },
+  { type: "mid-tom", timing: 570 },
+  { type: "low-tom", timing: 585 },
 ];
 
 class Game {
@@ -145,7 +187,8 @@ class Game {
     this.instructions = document.querySelector(".instructions-list");
     this.score = 0;
     this.scoreboard = document.getElementById("score");
-    this.mistakes = 3;
+    /*     this.levelPercentage = document.getElementById("percentage");
+    this.percentageRight; */
     this.notes = [];
     this.level = 1;
     this.levelCounter = document.getElementById("level");
@@ -159,6 +202,7 @@ class Game {
     this.notesLevelTwo = levelTwo;
     this.notesLevelThree = levelThree;
     this.notesLevelFour = levelFour;
+    this.notesLevelFive = levelFive;
     this.gameOverMenu = document.getElementById("game-over-box");
     this.gameOverMenu.style.display = "none";
     this.hitbox = document.getElementById("collide-box");
@@ -323,6 +367,10 @@ class Game {
       case 4:
         notesArray = this.notesLevelFour;
         this.numberOfNotes = this.notesLevelFour.length;
+        break;
+      case 5:
+        notesArray = this.notesLevelFive;
+        this.numberOfNotes = this.notesLevelFive.length;
     }
 
     const notesToPlay = notesArray.filter(
@@ -340,6 +388,11 @@ class Game {
       this.levelButton.style.display = "block";
       this.retryButton.style.display = "block";
       clearInterval(this.gameIntervalId);
+      /*       this.levelPercentage.style.display = "block";
+      this.percentageRight = Math.round(
+        (this.score / (this.numberOfNotes * 50)) * 100
+      );
+      this.levelPercentage.innerText = `${this.percentageRight}%`; */
       if (this.score === this.numberOfNotes * 50) {
         this.perfect.style.display = "block";
       } else if (this.score < this.numberOfNotes * 35) {
@@ -351,7 +404,7 @@ class Game {
   }
 
   countIn(frame) {
-    if (this.level > 4) {
+    if (this.level > 5) {
       this.gameComplete();
     } else if (frame === 51) {
       this.countOne.style.display = "block";
@@ -372,7 +425,6 @@ class Game {
   levelChange() {
     this.level += 1;
     this.score = 0;
-    this.mistakes = 3;
     this.levelCounter.innerText = `Level ${this.level}`;
     this.start();
     this.levelButton.style.display = "none";
