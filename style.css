@@ -16,7 +16,6 @@
   --instcolor6: #52a675;
   --instcolor7: #1982c4;
   --instcolor8: #4267ac;
-  --instcolor9: #6a4c93;
 }
 
 @keyframes fadein {
@@ -116,17 +115,22 @@ body {
   color: white;
   font-size: 40px;
   font-family: Tauri;
-  width: 600px;
-  height: 600px;
+  width: 700px;
+  height: 800px;
   background-color: var(--bodycolor2);
-  top: 200px;
-  left: 100px;
+  top: 100px;
+  left: 50px;
   border-radius: 12px;
   animation: fadein;
   animation-duration: 1s;
 }
 #game-description {
-  font-size: 24px;
+  font-size: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+#keyboard-map {
+  width: 650px;
 }
 
 #x {
@@ -256,7 +260,7 @@ body {
   border: 1px solid white;
 }
 
-#hi-tom-rail {
+#kick-drum-rail {
   position: absolute;
   height: 330px;
   width: 5px;
@@ -266,7 +270,7 @@ body {
   border: 1px solid white;
 }
 
-#kick-drum-rail {
+#hi-tom-rail {
   position: absolute;
   height: 330px;
   width: 5px;
@@ -361,7 +365,7 @@ body {
   border: 1px solid white;
 }
 
-#hi-tom-event {
+#kick-drum-event {
   position: absolute;
   display: none;
   border-radius: 5px;
@@ -379,7 +383,7 @@ body {
   border: 1px solid white;
 }
 
-#kick-drum-event {
+#hi-tom-event {
   position: absolute;
   display: none;
   border-radius: 5px;
@@ -506,7 +510,7 @@ body {
   border: 2px solid white;
 }
 
-#hi-tom-wrapper {
+#kick-drum-wrapper {
   position: absolute;
   border-radius: 5px;
   height: 22px;
@@ -524,7 +528,7 @@ body {
   border: 2px solid white;
 }
 
-#kick-drum-wrapper {
+#hi-tom-wrapper {
   position: absolute;
   border-radius: 5px;
   height: 22px;
@@ -638,7 +642,7 @@ body {
   border: 4px solid whitesmoke;
 }
 
-#hi-tom-wrapper-light {
+#kick-drum-wrapper-light {
   position: absolute;
   display: block;
   border-radius: 5px;
@@ -650,7 +654,7 @@ body {
   border: 4px solid whitesmoke;
 }
 
-#kick-drum-wrapper-light {
+#hi-tom-wrapper-light {
   position: absolute;
   display: block;
   border-radius: 5px;
@@ -1146,15 +1150,6 @@ body {
   #drum-image {
     display: none;
   }
-
-  /* CHANGED 
-#drum-image {
-  display: block;
-  position: absolute;
-  top: 505px;
-  left: 150px;  CHANGED 
-}
-*/
 
   .warning-label {
     display: block;

@@ -15,10 +15,10 @@ class Note {
       case "snare-drum":
         this.left = 227;
         break;
-      case "hi-tom":
+      case "kick-drum":
         this.left = 327;
         break;
-      case "kick-drum":
+      case "hi-tom":
         this.left = 427;
         break;
       case "mid-tom":

@@ -13,7 +13,7 @@ window.onload = function () {
   // Crash Cymbal
   const crashCymbal = document.getElementById("crash-cymbal");
   const crashCymbalSound = new Audio("./sounds/crash-cymbal.mp3");
-  let crashCymbalKey = "KeyQ";
+  let crashCymbalKey = "KeyS";
   const crashCymbalLight = document.getElementById("crash-cymbal-light");
   const crashCymbalLightJam = document.getElementById("jam-crash-cymbal-light");
   const crashCymbalWrapperLight = document.getElementById(
@@ -30,7 +30,7 @@ window.onload = function () {
   // Snare Drum
   const snareDrum = document.getElementById("snare-drum");
   const snareDrumSound = new Audio("./sounds/snare-drum.mp3");
-  let snareDrumKey = "KeyS";
+  let snareDrumKey = "KeyD";
   const snareDrumLight = document.getElementById("snare-drum-light");
   const snareDrumLightJam = document.getElementById("jam-snare-drum-light");
   const snareDrumWrapperLight = document.getElementById(
@@ -47,7 +47,7 @@ window.onload = function () {
   // Hi-Tom
   const hiTom = document.getElementById("hi-tom");
   const hiTomSound = new Audio("./sounds/hi-tom.mp3");
-  let hiTomKey = "KeyW";
+  let hiTomKey = "KeyH";
   const hiTomLight = document.getElementById("hi-tom-light");
   const hiTomLightJam = document.getElementById("jam-hi-tom-light");
   const hiTomWrapperLight = document.getElementById("hi-tom-wrapper-light");
@@ -57,7 +57,7 @@ window.onload = function () {
   // Kick Drum
   const kickDrum = document.getElementById("kick-drum");
   const kickDrumSound = new Audio("./sounds/kick-drum.mp3");
-  let kickDrumKey = "KeyX";
+  let kickDrumKey = "Space";
   const kickDrumLight = document.getElementById("kick-drum-light");
   const kickDrumLightJam = document.getElementById("jam-kick-drum-light");
   const kickDrumWrapperLight = document.getElementById(
@@ -74,7 +74,7 @@ window.onload = function () {
   // Mid-Tom
   const midTom = document.getElementById("mid-tom");
   const midTomSound = new Audio("./sounds/mid-tom.mp3");
-  let midTomKey = "KeyE";
+  let midTomKey = "KeyJ";
   const midTomLight = document.getElementById("mid-tom-light");
   const midTomLightJam = document.getElementById("jam-mid-tom-light");
   const midTomWrapperLight = document.getElementById("mid-tom-wrapper-light");
@@ -84,29 +84,17 @@ window.onload = function () {
   // Low-Tom
   const lowTom = document.getElementById("low-tom");
   const lowTomSound = new Audio("./sounds/low-tom.mp3");
-  let lowTomKey = "KeyD";
+  let lowTomKey = "KeyK";
   const lowTomLight = document.getElementById("low-tom-light");
   const lowTomLightJam = document.getElementById("jam-low-tom-light");
   const lowTomWrapperLight = document.getElementById("low-tom-wrapper-light");
   buttonClicks(lowTom, lowTomSound, lowTomLight);
   jamMakeSoundAndLight(lowTomSound, lowTomKey, lowTomLightJam);
   makeSoundAndLight(lowTomSound, lowTomKey, lowTomLight, lowTomWrapperLight);
-  // Floor Tom
-  const floorTom = document.getElementById("floor-tom");
-  const floorTomSound = new Audio("./sounds/floor-tom.mp3");
-  let floorTomKey = "KeyC";
-  buttonClicks(floorTom, floorTomSound, lowTomLight);
-  jamMakeSoundAndLight(floorTomSound, floorTomKey, lowTomLightJam);
-  makeSoundAndLight(
-    floorTomSound,
-    floorTomKey,
-    lowTomLight,
-    lowTomWrapperLight
-  );
   // Ride Cymbal
   const rideCymbal = document.getElementById("ride-cymbal");
   const rideCymbalSound = new Audio("./sounds/ride-cymbal.mp3");
-  let rideCymbalKey = "KeyR";
+  let rideCymbalKey = "KeyL";
   const rideCymbalLight = document.getElementById("ride-cymbal-light");
   const rideCymbalLightJam = document.getElementById("jam-ride-cymbal-light");
   const rideCymbalWrapperLight = document.getElementById(
