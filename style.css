@@ -1114,7 +1114,7 @@ body {
   cursor: pointer;
 }
 
-@media screen and (max-width: 800px), (max-height: 1000px) {
+/* @media screen and (max-width: 800px), (max-height: 1000px) {
   .game-title-screen {
     display: none;
   }
@@ -1162,4 +1162,4 @@ body {
     text-align: center;
     color: whitesmoke;
   }
-}
+} */
